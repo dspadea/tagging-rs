@@ -1,0 +1,18 @@
+[package]
+name = "tagindex"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+#redis = { version = "*", optional = true, features = ["tokio-native-tls-comp", "cluster"] }
+redis = { version = "*", optional = true, features = ["tls"] }
+
+[features]
+
+redis_backing = ["redis"]
+memory_backing = []
+
+default = ["redis_backing", "memory_backing"]
