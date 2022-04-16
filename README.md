@@ -45,9 +45,9 @@ idx.tag_item("my_key", "my_tag");
 
 let exists = idx.tag_exists("my_tag");
 
-let items = idx.retrieve_items_with_tag("my_tag").contains(&"my_key".to_string());
+let items = idx.retrieve_items_with_tag("my_tag");
 
-let tags = idx.retrieve_tags_for_item("my_key").contains(&"my_tag".to_string());
+let tags = idx.retrieve_tags_for_item("my_key");
 
 idx.untag_item("my_key", "my_tag");
 
